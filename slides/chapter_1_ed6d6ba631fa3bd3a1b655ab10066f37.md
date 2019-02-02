@@ -72,8 +72,8 @@ rules = association_rules(frequent_itemsets, metric='lift', min_threshold=1.0)
 
 **Third, examine the data.**
 ```
-#Show output sorted by lift
-rules.sort_values('lift', ascending=False)
+#Show output sorted by confidence
+rules.sort_values('confidence', ascending=False)
 rules.head(5)
 ```
 
@@ -88,10 +88,11 @@ The first thing we will need to do is call the import the Aprior function from t
 ```yaml
 type: "FullImageSlide"
 key: "9f79bdfddb"
+center_content: false
 ```
 
 `@part1`
-
+![](https://assets.datacamp.com/production/repositories/4596/datasets/4908a085329b5ad8fea6d14a28113212f3a03a65/SortedByLift.jpg)
 
 
 `@script`
@@ -99,7 +100,27 @@ key: "9f79bdfddb"
 
 
 ---
-## Final Slide
+## Examining the Output
+
+```yaml
+type: "FullSlide"
+key: "841dad561f"
+```
+
+`@part1`
+- Coffee is commonly bought after making a purchase for bread or pastries.
+
+- Pasteries are commonly bought along with other bread.
+
+- This can help us optimize product placement, for example placing freshly made pastries next to our bread.
+
+
+`@script`
+Now that we have sorted the data. We can clearly see that coffee is very likely to be bought as a consequence of a customer buying bread. What we can tell from this is that coffee is commonly purchased after a purchase of bread has been made. Beyond this we can still examine other relationships. For example, bread is bought with pastries.
+
+
+---
+## Your Turn!
 
 ```yaml
 type: "FinalSlide"

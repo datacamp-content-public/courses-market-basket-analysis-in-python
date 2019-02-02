@@ -1,6 +1,7 @@
 ---
 title: 'Using Association Rules To Find Desired Products'
 description: 'Chapter description goes here.'
+free_preview: true
 ---
 
 ## Example coding exercise

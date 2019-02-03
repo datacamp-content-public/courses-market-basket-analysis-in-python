@@ -44,7 +44,7 @@ This is an example exercise.
 
 ---
 
-## Implementing a Market Basket Analysis
+## Using the Apriori Algorithm and Analyzing the Data
 
 ```yaml
 type: VideoExercise

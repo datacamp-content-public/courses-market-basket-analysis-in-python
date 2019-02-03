@@ -3,7 +3,7 @@ title: Insert title here
 key: ed6d6ba631fa3bd3a1b655ab10066f37
 
 ---
-## Implementing a Market Basket Analysis
+## Using the Apriori Algorithm and Analyzing the Data
 
 ```yaml
 type: "TitleSlide"
@@ -26,6 +26,58 @@ Now that we've encoded our data we can begin to perform our our market basket an
 ```yaml
 type: "FullCodeSlide"
 key: "54738b5816"
+disable_transition: true
+```
+
+`@part1`
+**First import the libraries.
+**
+```
+from mlxtend.frequent_patterns import association_rules, apriori
+```
+
+
+`@script`
+The first thing we will need to do is call the import the Apriori function from the MlExtend library.
+
+
+---
+## Using the Apriroi Algorithm
+
+```yaml
+type: "FullCodeSlide"
+key: "a0634d94d8"
+disable_transition: true
+```
+
+`@part1`
+**First import the libraries.
+**
+```
+from mlxtend.frequent_patterns import association_rules, apriori
+```
+
+**Second, build a frequent itemset & then define the rules.**
+```
+# Use Apriori to build a frequen itemset.
+frequent_itemsets = apriori(encoded_data, min_support=0.01, use_colnames=True)
+
+# Define the rules.
+rules = association_rules(frequent_itemsets, metric='lift', min_threshold=1.0)
+```
+
+
+`@script`
+After that, we will pass through the encoded data frame from our previous module into the Apriror function. Next, we will define two parameters, the min_support & use_colnames. The use_colnames will use the column names we passed through in our data frame. The min_support defines our support metric threshold, the lower it is the more results we will see & vice versa it ranges between 0 & 1. We will set it equal to .01 so we get an optimal amount of transactions.
+
+
+---
+## Using the Apriroi Algorithm
+
+```yaml
+type: "FullCodeSlide"
+key: "414ccc4976"
+disable_transition: true
 ```
 
 `@part1`
@@ -53,7 +105,7 @@ rules.head(5)      #We can always get more data if we like.
 
 
 `@script`
-The first thing we will need to do is call the import the Aprior function from the MlExtend library. After that, we will pass through the encoded data frame from our previous module into the Apriror function. Next, we will define two parameters, the min_support & use_colnames. The use_colnames will use the column names we passed through in our data frame. The min_support defines our support metric threshold, the lower it is the more results we will see & vice versa it ranges between 0 & 1. We will set it equal to .01 so we get an optimal amount of transactions. Finally let's print out the first five rows using the head method.
+Finally, let's sort the values by the confidence metric and then print out the first five rows using the head method. If we want more rows we can simply pass through a larger number.
 
 
 ---
@@ -87,11 +139,13 @@ key: "841dad561f"
 ```
 
 `@part1`
-- Coffee is commonly bought after making a purchase for bread or pastries.
+![](https://assets.datacamp.com/production/repositories/4596/datasets/5ba5f408d6fd1c02e16795e92b20c824d750330f/Annotation%202019-02-03%20072320.jpg)
+ 
+- Coffee is commonly bought **after making a purchase for bread or pastries**.
 
-- Pasteries are commonly bought along with other bread.
+- Pasteries are **commonly bought along with other bread**.
 
-- This can help us optimize product placement, for example placing freshly made pastries next to our bread.
+- This can help us optimize product placement, for example **placing freshly made pastries next to our bread**.
 
 
 `@script`
@@ -107,5 +161,5 @@ key: "2153fe9002"
 ```
 
 `@script`
-
+Now that you've seen my example, it's your turn to recreate my market basket analysis.
 

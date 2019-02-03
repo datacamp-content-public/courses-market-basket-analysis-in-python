@@ -24,32 +24,6 @@ Now that we've encoded our data we can begin to perform our our market basket an
 ## Using the Apriroi Algorithm
 
 ```yaml
-type: "TwoColumns"
-key: "8341baec8a"
-```
-
-`@part1`
-**#Generates rules from the itemsets by defining a minimum threshold.
-rules = association_rules(encoded_data, min_support=0.1, use_colnames=False)**
-
-```
-#Generates rules from the itemsets by defining a minimum threshold.
-rules = association_rules(encoded_data, min_support=0.1, use_colnames=False)
-```
-
-
-`@part2`
-
-
-
-`@script`
-The first thing we will need to do is call the import the Aprior function from the MlExtend library. After that, we will pass through the encoded data frame from our previous module into the Apriror function. Next, we will define two parameters, the min_support & use_colnames. The use_colnames will use the column names we passed through in our data frame. The min_support defines our support metric threshold, the lower it is the more results we will see & vice versa it ranges between 0 & 1. We will set it equal to .01 so we get an optimal amount of transactions. Finally let's print out the first five rows using the head method.
-
-
----
-## Using the Apriroi Algorithm
-
-```yaml
 type: "FullCodeSlide"
 key: "54738b5816"
 ```
@@ -74,7 +48,7 @@ rules = association_rules(frequent_itemsets, metric='lift', min_threshold=1.0)
 ```
 #Show output sorted by confidence
 rules.sort_values('confidence', ascending=False)
-rules.head(5)
+rules.head(5)      #We can always get more data if we like.
 ```
 
 
@@ -83,20 +57,25 @@ The first thing we will need to do is call the import the Aprior function from t
 
 
 ---
-## Here is the output...
+## Here is the first five rows of our output sorted by lift!
 
 ```yaml
-type: "FullImageSlide"
-key: "9f79bdfddb"
+type: "TwoRows"
+key: "c4abbd588f"
 center_content: false
+disable_transition: true
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/4596/datasets/4908a085329b5ad8fea6d14a28113212f3a03a65/SortedByLift.jpg)
+![](https://assets.datacamp.com/production/repositories/4596/datasets/5ba5f408d6fd1c02e16795e92b20c824d750330f/Annotation%202019-02-03%20072320.jpg)
+
+
+`@part2`
+Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
 
 
 `@script`
-
+We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can see the antecedents (the item purchased) and the consequents (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that purchasing Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift, the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
 
 
 ---

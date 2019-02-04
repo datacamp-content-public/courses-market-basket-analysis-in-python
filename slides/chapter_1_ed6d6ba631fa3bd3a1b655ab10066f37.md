@@ -25,83 +25,31 @@ Now that we've encoded our data we can begin to perform our our market basket an
 
 ```yaml
 type: "FullCodeSlide"
-key: "54738b5816"
-disable_transition: true
-```
-
-`@part1`
-**First import the libraries.
-**
-```
-from mlxtend.frequent_patterns import association_rules, apriori
-```
-
-
-`@script`
-The first thing we will need to do is call the import the Apriori function from the MlExtend library.
-
-
----
-## Using the Apriroi Algorithm
-
-```yaml
-type: "FullCodeSlide"
-key: "a0634d94d8"
-disable_transition: true
-```
-
-`@part1`
-**First import the libraries.
-**
-```
-from mlxtend.frequent_patterns import association_rules, apriori
-```
-
-**Second, build a frequent itemset & then define the rules.**
-```
-# Use Apriori to build a frequen itemset.
-frequent_itemsets = apriori(encoded_data, min_support=0.01, use_colnames=True)
-
-# Define the rules.
-rules = association_rules(frequent_itemsets, metric='lift', min_threshold=1.0)
-```
-
-
-`@script`
-After that, we will pass through the encoded data frame from our previous module into the Apriror function. Next, we will define two parameters, the min_support & use_colnames. The use_colnames will use the column names we passed through in our data frame. The min_support defines our support metric threshold, the lower it is the more results we will see & vice versa it ranges between 0 & 1. We will set it equal to .01 so we get an optimal amount of transactions.
-
-
----
-## Using the Apriroi Algorithm
-
-```yaml
-type: "FullCodeSlide"
 key: "414ccc4976"
 disable_transition: true
 ```
 
 `@part1`
-**First import the libraries.
-**
-```
+**First import the libraries.** {{1}}
+``` python
 from mlxtend.frequent_patterns import association_rules, apriori
-```
+```{{1}}
 
-**Second, build a frequent itemset & then define the rules.**
-```
+**Second, build a frequent itemset & then define the rules.**{{2}}
+``` python
 # Use Apriori to build a frequen itemset.
 frequent_itemsets = apriori(encoded_data, min_support=0.01, use_colnames=True)
 
 # Define the rules.
 rules = association_rules(frequent_itemsets, metric='lift', min_threshold=1.0)
-```
+```{{2}}
 
-**Third, examine the data.**
-```
+**Third, examine the data.**{{3}}
+``` python
 #Show output sorted by confidence
 rules.sort_values('confidence', ascending=False)
-rules.head(5)      #We can always get more data if we like.
-```
+rules.head(5)   #We can always get more data if we like.
+```{{3}}
 
 
 `@script`

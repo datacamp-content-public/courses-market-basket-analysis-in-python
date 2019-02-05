@@ -60,22 +60,57 @@ Finally, let's sort the values by the confidence metric and then print out the f
 ## Here is the first five rows of our output sorted by lift!
 
 ```yaml
-type: "TwoRows"
-key: "c4abbd588f"
-center_content: false
+type: "FullSlide"
+key: "c047dea793"
 disable_transition: true
 ```
 
 `@part1`
 ![](https://assets.datacamp.com/production/repositories/4596/datasets/5ba5f408d6fd1c02e16795e92b20c824d750330f/Annotation%202019-02-03%20072320.jpg)
 
-
-`@part2`
 Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
 
 
 `@script`
 We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can see the antecedents (the item purchased) and the consequents (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that purchasing Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift, the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
+
+
+---
+## Here is the first five rows of our output sorted by lift!
+
+```yaml
+type: "FullSlide"
+key: "edad9ed2b2"
+disable_transition: true
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/4596/datasets/ba3dd6b0753c905671979d928953f44796ba3eaf/confidence_highlighted.jpg)
+
+Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
+
+
+`@script`
+We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can see the antecedents (the item purchased) and the consequent (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that purchasing Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift, the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
+
+
+---
+## Here is the first five rows of our output sorted by lift!
+
+```yaml
+type: "FullSlide"
+key: "37048a3f7d"
+disable_transition: true
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/4596/datasets/efd5dd26883779e7dac774da54cb6994627767ff/support_highlighted.jpg)
+
+Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
+
+
+`@script`
+We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can see the antecedents (the item purchased) and the consequent (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that purchasing Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift, the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
 
 
 ---
@@ -101,7 +136,7 @@ Now that we have sorted the data. We can clearly see that coffee is very likely 
 
 
 ---
-## Your Turn!
+## Let's Practice!
 
 ```yaml
 type: "FinalSlide"

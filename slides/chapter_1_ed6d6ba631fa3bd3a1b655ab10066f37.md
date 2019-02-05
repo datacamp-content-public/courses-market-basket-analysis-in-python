@@ -17,7 +17,7 @@ title: Senior Data Science Analyst
 
 
 `@script`
-Now that we've encoded our data we can begin to perform our our market basket analysis. This will be broken into two parts building our frequent item set & then defining the association rules to filter the results.
+Now that we've encoded our data we can begin to perform our market basket analysis. This will be broken into two parts building our frequent item set & then defining the association rules to filter the results.
 
 
 ---
@@ -53,11 +53,11 @@ rules.head(5)   #We can always get more data if we like.
 
 
 `@script`
-Finally, let's sort the values by the confidence metric and then print out the first five rows using the head method. If we want more rows we can simply pass through a larger number.
+First, we will import our libraries. We will import the association rules and Apriori modules from the mlxtend library. Next, we will pass our encoded data frame through our Apriori algorithm to generate our frequent item set. Next, we will pass through our frequent itemset into our association rules function to generate a DataFrame of association rules including the metrics 'score', 'confidence', and 'lift'. The minimal threshold is used to decide whether a candidate rule is of interest. Finally, let's sort the values by the confidence metric and then print out the first five rows using the head method. If we want more rows we can simply pass through a larger number.
 
 
 ---
-## Here is the first five rows of our output sorted by lift!
+## Here is the first five rows of our output sorted by confidence!
 
 ```yaml
 type: "FullSlide"
@@ -66,7 +66,7 @@ disable_transition: true
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/4596/datasets/5ba5f408d6fd1c02e16795e92b20c824d750330f/Annotation%202019-02-03%20072320.jpg)
+![](https://assets.datacamp.com/production/repositories/4596/datasets/a7e57512e02cc526066f25ebf6dd514ae7b8dc08/CorrectedOne.jpg)
 
 Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
 
@@ -76,7 +76,7 @@ We can now see that the data is sent back to us in a new data frame that has our
 
 
 ---
-## Here is the first five rows of our output sorted by lift!
+## Here is the first five rows of our output sorted by confidence!
 
 ```yaml
 type: "FullSlide"
@@ -85,7 +85,7 @@ disable_transition: true
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/4596/datasets/ba3dd6b0753c905671979d928953f44796ba3eaf/confidence_highlighted.jpg)
+![](https://assets.datacamp.com/production/repositories/4596/datasets/7951b5d8c9b5a7c8b942fd67b5142407d13dc3c4/ConfidenceCorr.jpg)
 
 Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
 
@@ -95,7 +95,7 @@ We can now see that the data is sent back to us in a new data frame that has our
 
 
 ---
-## Here is the first five rows of our output sorted by lift!
+## Here is the first five rows of our output sorted by confidence!
 
 ```yaml
 type: "FullSlide"
@@ -104,7 +104,7 @@ disable_transition: true
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/4596/datasets/efd5dd26883779e7dac774da54cb6994627767ff/support_highlighted.jpg)
+![](https://assets.datacamp.com/production/repositories/4596/datasets/8ead35dccb61fcb90d34599e0f891171c8f45ccb/LiftConfidenceCorr.jpg)
 
 Here is our new output in a data frame. We now have new columns that give us the different metrics we need to **analyze the data**.
 
@@ -122,17 +122,17 @@ key: "841dad561f"
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/4596/datasets/5ba5f408d6fd1c02e16795e92b20c824d750330f/Annotation%202019-02-03%20072320.jpg)
+![](https://assets.datacamp.com/production/repositories/4596/datasets/a7e57512e02cc526066f25ebf6dd514ae7b8dc08/CorrectedOne.jpg)
  
 - Coffee is commonly bought **after making a purchase for bread or pastries**.
 
 - Pasteries are **commonly bought along with other bread**.
 
-- This can help us optimize product placement, for example **placing freshly made pastries next to our bread**.
+- This can help us optimize product placement, for example, **placing freshly made pastries next to our bread**.
 
 
 `@script`
-Now that we have sorted the data. We can clearly see that coffee is very likely to be bought as a consequence of a customer buying bread. What we can tell from this is that coffee is commonly purchased after a purchase of bread has been made. Beyond this we can still examine other relationships. For example, bread is bought with pastries.
+Now that we have sorted the data. We can clearly see that coffee is very likely to be bought as a consequence of a customer buying bread. Beyond this, we can still examine other relationships. For example, bread is bought with pastries.
 
 
 ---

@@ -91,7 +91,7 @@ Here is our new output in a data frame. We now have new columns that give us the
 
 
 `@script`
-We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can see the antecedents (the item purchased) and the consequent (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that purchasing Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift, the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
+We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can look at the antecedents (the item purchased) and the consequents (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that buying Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift; the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
 
 
 ---
@@ -110,7 +110,7 @@ Here is our new output in a data frame. We now have new columns that give us the
 
 
 `@script`
-We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can see the antecedents (the item purchased) and the consequent (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that purchasing Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift, the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
+We can now see that the data is sent back to us in a new data frame that has our metrics included. From this data frame, we can look at the antecedents (the item purchased) and the consequents (the item purchased after the purchase of the antecedents). Two more columns we are concerned with is confidence and lift. Confidence tells us how likely it is that buying Item1 (the antecedent) results in a purchase of Item2 (the consequent). Finally, we have lift; the lift refers to how the chances of Item2 being purchased increased given that Item1 is purchased.
 
 
 ---
